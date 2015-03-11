@@ -32,6 +32,7 @@ Curently, the software are only tested under Linux (specifically, Ubuntu)
 Usage
 ----
 ###Main routine:###
+
 1. run ```./segfit --help``` to see all the options. Main options are
   * ```-s```: the input sequence. Numbers can be separated by either blank or ','
   * ```-l```: how long of the input sequence from the beginning is to be segmented. For example, if running ```./segfit -s "1,2,3,4,5,6" -l 5``` will only segment the first 5 element of the input sequence, i.e. ```"1,2,3,4,5"```.
@@ -43,14 +44,14 @@ Usage
    
 |            | start index | end index | parameter a | parameter b | parameter c| fitting order |
 |:----------:|:-----------:|:---------:|:-----------:|:-----------:|:----------:|:-------------:|
-| 1st phase: |0 |	4	| 6.25 |	1 |	0 |	0 |
-|2rd phase:|5 |	8 |	6.25 | 	2 |	0 |	0 |
+| 1st phase: |      0      |     4     |    6.25     |      1      |      0     |       0       |
+| 2rd phase: |      5      |     8     |    6.25     |      2      |      0     |       0       |
 
 We can see the algorithm segments the sequence into two phases. Please notice that, the program scaled the sequnce to [0,100], so the parametes actually describe sequcence [6.25, 12.5, 18.75, 25.0, 31.25, 6.25, 25.0, 56.25, 100.0].
 
 
 ###Python library###
-TODO
+
 
 ###As a C++ library###
 TODO
