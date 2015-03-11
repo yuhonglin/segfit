@@ -27,7 +27,7 @@ Curently, the software are only tested under Linux (specifically, Ubuntu)
 
 1. first make sure ```g++```, ```gfortran``` and ```cmake``` are installed.
 
-2. Optional: If you need python support, install ```libboost-python-dev``` (tested under version >=1.54)
+2. Optional: If you need python support, install ```python-dev``` and ```libboost-python-dev``` (tested under version >=1.54)
 
 3. Then run ```cmake .``` in the folder. If no error happened, the executable is ```./segfit```. Python lib file is ```./libpysegfit.so```
 
