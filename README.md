@@ -63,11 +63,8 @@ First, you need to put the ```libpysegfit.so``` to somewhere in the ```PYTHONPAT
 [(1, 5, 6.25, 1.0, 0.0, 0), (6, 9, 6.25, 2.0, 0.0, 0)]
 ```
 
-
-   
-
 ###As a C++ library###
-TODO
+The code is very easy to be used as an c++ library. See ```main.cpp``` (line 164) for example.
    
 Copy Right Notice
 -----------------
