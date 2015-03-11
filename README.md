@@ -52,6 +52,19 @@ We can see the algorithm segments the sequence into two phases. Please notice th
 
 ###Python library###
 
+First, you need to put the ```libpysegfit.so``` to somewhere in the ```PYTHONPATH```. Here is an example
+
+```python
+>>> from libpysegfit import PySegFit
+>>> psf = PySegFit()
+>>> psf.get_para() # see the default parameters
+{'lb': -6.0, 'btype': 2, 'm': 15.0, 'smp': 2.3, 'maxiter': 1000.0, 'factr': 5000.0, 'pgtol': 1e-05, 'ub': 6.0}
+>>> psf.segfit([1,2,3,4,5,1,4,9,16]) # segfit a sequence
+[(1, 5, 6.25, 1.0, 0.0, 0), (6, 9, 6.25, 2.0, 0.0, 0)]
+```
+
+
+   
 
 ###As a C++ library###
 TODO
