@@ -31,6 +31,9 @@ Curently, the software are only tested under Linux (specifically, Ubuntu)
 
 Usage
 ----
+
+> Please notice that, the index is "zero-based" in the main program and "one-based" in the python library.
+
 ###Main routine:###
 
 1. run ```./segfit --help``` to see all the options. Main options are
