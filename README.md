@@ -41,9 +41,9 @@ Usage
    * Each row is a segment(phase) found consecutively from left to right
    * In each row, the meanings of each number are (from left to right) "start index", "end index", "parameter a", "parameter b", "parameter c" and "fitting order". For example, if we run ```./segfit -s "1,2,3,4,5,1,4,9,16" -l 9```, the output can be seen as,
    
-| | start index | end index | parameter a | parameter b | parameter c| fitting order |
-|------------
-|1st phase:|0 |	4	| 6.25 |	1 |	0 |	0 |
+|            | start index | end index | parameter a | parameter b | parameter c| fitting order |
+|:----------:|:-----------:|:---------:|:-----------:|:-----------:|:----------:|:-------------:|
+| 1st phase: |0 |	4	| 6.25 |	1 |	0 |	0 |
 |2rd phase:|5 |	8 |	6.25 | 	2 |	0 |	0 |
 
 We can see the algorithm segments the sequence into two phases. Please notice that, the program scaled the sequnce to [0,100], so the parametes actually describe sequcence [6.25, 12.5, 18.75, 25.0, 31.25, 6.25, 25.0, 56.25, 100.0].
