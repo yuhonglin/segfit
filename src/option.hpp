@@ -1,14 +1,3 @@
-/**
- * @file   option.hpp
- * @author yuhonglin <yuhonglin1986@gmail.com>
- * @date   Wed Mar 11 15:25:57 2015
- * 
- * @brief  An easy to use command-line interface
- * 
- * 
- */
-
-
 #ifndef _OPTION_H_
 #define _OPTION_H_
 
