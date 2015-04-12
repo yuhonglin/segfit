@@ -18,7 +18,7 @@ inline void min(vector<double> &d, int ei, double &minv, int &mini) {
 DpSeg::DpSeg() {
   _scale = 100.0;
   _inputedSwitchModelPenalty = 2.3;
-};
+}
 
 void DpSeg::run() {
 

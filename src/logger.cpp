@@ -21,7 +21,7 @@ string Logger::_output_filename;
 Logger *Logger::get_instance() {
   static Logger instance;
   return &instance;
-};
+}
 
 void Logger::set_filename(string filename) { _output_filename = filename; }
 
