@@ -5,6 +5,7 @@ export CXXFLAGS = -std=c++11 -O3 -Wall -pedantic
 export LDFLAGS = -lgfortran
 export FORFLAGS = $(CXXFLAGS)
 # makefile
+.PHONY: segfit
 segfit:
 	@$(MAKE) -C src
 
