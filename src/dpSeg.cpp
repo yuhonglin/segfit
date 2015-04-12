@@ -102,6 +102,9 @@ void DpSeg::run() {
 
 void DpSeg::dump() {
   LOG_INFO("-*- [Infomation of dpSeg]");
+  LOG_INFO("scale=", _scale);
+  LOG_INFO("eta=", _inputedSwitchModelPenalty);
+  
   std::stringstream ss;
   ss << "Scaled string :";
   for (auto s : (*_shrS)) {
