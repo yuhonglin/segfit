@@ -9,7 +9,7 @@ solver.o: solver.f
 	$(FORTRAN) $(FORFLAGS) -c solver.f
 
 %.o: %.cpp %.hpp
-	g++ -O3 -Wall -std=c++11 -o $@ -c $< $(LDFLAGS)
+	g++ $(CXXFLAGS) -o $@ -c $< $(LDFLAGS)
 
 .PHONY: clean
 clean:
