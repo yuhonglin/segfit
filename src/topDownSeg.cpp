@@ -74,7 +74,8 @@ void TopDownSeg::run() {
   double totalLoss = currentSeg.seg.loss;
 
   while (totalLoss > _threshold &&
-         (segQueue.top().seg.tailIndex - segQueue.top().seg.headIndex) >= 2*_fitAlg->get_numParam()) {
+         (segQueue.top().seg.tailIndex - segQueue.top().seg.headIndex) >=
+             2 * _fitAlg->get_numParam()) {
     currentSeg = segQueue.top();
     segQueue.pop();
     // fit the left sub segment
