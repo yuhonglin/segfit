@@ -4,16 +4,11 @@ SegFit
 SegFit is a C++ implementation of the *SegFit* Algorithm proposed by the following paper,
 
 
->[Honglin Yu](http://yuhonglin.github.io/), [Lexing Xie](http://users.cecs.anu.edu.au/~xlx/) and [Scott Sanner](http://users.cecs.anu.edu.au/~ssanner/), **Exploring the Popularity Phases of YouTube Videos: Detection, Observations and Predictions**, Accepted by ICWSM-15
+>[Honglin Yu](http://yuhonglin.github.io/), [Lexing Xie](http://users.cecs.anu.edu.au/~xlx/) and [Scott Sanner](http://users.cecs.anu.edu.au/~ssanner/), **The Lifecyle of a Youtube Video: Phases, Content and Popularity**, Accepted by ICWSM-15
 
 
 
-The goal is to segment a sequence of numbers into consecutive of phases and fit each of them with a generalized power-law,
-
-
-<img style="display: block; margin-left: auto; margin-right: auto;" src="http://www.sciweavers.org/upload/Tex2Img_1426051911/render.png">
-
-
+The goal is to segment a sequence of numbers into consecutive of phases and fit each of them with a generalized power-law.
 
 This repository also includes an easy-to-use python wrapper.
 
