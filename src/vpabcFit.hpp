@@ -57,9 +57,6 @@ private:
   /// difference between fitted value and VpabcFit::_S
   vector<double> _diff;
 
-  /// the scale of string
-  double _scale;
-
   /// the parameters of the curve
   double &_a, &_b, &_c;
 

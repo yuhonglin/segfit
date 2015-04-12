@@ -9,6 +9,8 @@ FitAlg::FitAlg() {
   _endIdx = 0;
   _length = 0;
 
+  _scale = 100.0;
+
   _segment.headIndex = std::numeric_limits<int>::quiet_NaN();
   _segment.tailIndex = std::numeric_limits<int>::quiet_NaN();
   _segment.a = std::numeric_limits<double>::quiet_NaN();
@@ -46,7 +48,27 @@ void FitAlg::set_parameter(string n, string v) {
 }
 
 /// set string
-void FitAlg::set_string(shared_ptr<vector<double> > &vpd) { _shrS = vpd; }
+void FitAlg::set_string(shared_ptr<vector<double> > &vpd) {
+  _shrS = vpd;
+
+  double maxS = 0;
+  double rate = 0;
+
+  // get max
+  for (unsigned int i = 0; i < _shrS->size(); i++) {
+    if ((*_shrS)[i] > maxS) {
+      maxS = (*_shrS)[i];
+    }
+  }
+  // compute rate to save time
+  if (maxS != 0) {
+    rate = _scale / maxS;
+  }
+  // scale
+  for (unsigned int i = 0; i < _shrS->size(); i++) {
+    (*_shrS)[i] *= rate;
+  }
+}
 
 void FitAlg::dump() {
   std::stringstream ss;

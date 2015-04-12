@@ -92,6 +92,8 @@ protected:
   int _startIdx;
   /// \f${\bf [}\_startindx, \_endIndex{\bf)}\f$
   int _endIdx;
+  /// the scale of string
+  double _scale;
   /// parameter
   Segment _segment;
 
