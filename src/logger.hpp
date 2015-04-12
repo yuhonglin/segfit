@@ -75,7 +75,7 @@ public:
       _lout << " (in \"" << file << "\" at line " << line << ") ";
     }
     _log(args...);
-  };
+  }
 
   /// set log file name
   static void set_filename(string filename);
