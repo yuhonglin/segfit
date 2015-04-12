@@ -73,7 +73,7 @@ void DpSeg::run() {
     _coefMatrix[3 * mainIdx - 1] =
         _tmpCoefMatrix[3 * _segBeginIndex[mainIdx - 1] + 2];
 
-    fitLoss[mainIdx-1] = tmpFitLoss[_segBeginIndex[mainIdx - 1]];
+    fitLoss[mainIdx - 1] = tmpFitLoss[_segBeginIndex[mainIdx - 1]];
   }
 
   // update result
@@ -91,7 +91,7 @@ void DpSeg::run() {
     tmpSeg.order = _fitOrder[i];
 
     tmpSeg.loss = fitLoss[i];
-    
+
     i = _segBeginIndex[i] - 1;
 
     _result->push_back(tmpSeg);
