@@ -1,17 +1,15 @@
 src = $(wildcard *.cpp)
+header = $(wildcard *.hpp) $(wildcard *.h)
 obj = $(src:.cpp=.o)
 
-CC = g++
-
 ../segfit: $(obj) solver.o
-	$(CC) -O3 -o $@ $^ -lgfortran
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 solver.o: solver.f
-	gfortran -O3 -fexceptions -c solver.f
+	$(FORTRAN) $(FORFLAGS) -c solver.f
 
-%.o: %.cpp
-	g++ -O3 -Wall -std=c++11 -o $@ -c $< -lgfortran
-
+%.o: %.cpp %.hpp
+	g++ -O3 -Wall -std=c++11 -o $@ -c $< $(LDFLAGS)
 
 .PHONY: clean
 clean:
