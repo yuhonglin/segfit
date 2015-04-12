@@ -78,6 +78,9 @@ public:
   /// get number of parameter
   int get_numParam();
 
+  /// get name
+  string get_name();
+
 protected:
   /// the string, use a raw pointer aside the smart
   /// pointer due to speed concerns

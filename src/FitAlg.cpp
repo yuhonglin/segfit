@@ -62,3 +62,5 @@ void FitAlg::dump() {
 }
 
 int FitAlg::get_numParam() { return _numParameter; }
+
+string FitAlg::get_name() { return _name; }
