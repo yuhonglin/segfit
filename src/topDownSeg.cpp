@@ -126,6 +126,9 @@ void TopDownSeg::set_string(shared_ptr<vector<double> > &pd) {
 
 void TopDownSeg::dump() {
   LOG_INFO("-*- [Infomation of ", _name, "]");
+  LOG_INFO("fitting method : ", _fitAlg->get_name());
+  LOG_INFO("threshold=", _threshold);
+  
   std::stringstream ss;
   ss << "Scaled string :";
   for (auto s : (*_shrS)) {
