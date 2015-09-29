@@ -12,6 +12,12 @@ The goal is to segment a sequence of numbers into consecutive of phases and fit 
 
 This repository also includes an easy-to-use python wrapper.
 
+
+Examples
+---------
+See [http://yuhonglin.github.io/2014/10/04/viewcount-phase.html](http://yuhonglin.github.io/2014/10/04/viewcount-phase.html) for examples.
+
+
 Version
 -------
 2.1
