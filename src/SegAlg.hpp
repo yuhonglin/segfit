@@ -48,9 +48,13 @@ public:
   /// the interface to set parameters
   virtual void set_parameter(string name, double value);
   virtual void set_parameter(string name, string value);
+  virtual void set_parameter(string name, int value);
 
   /// get the result
   shared_ptr<vector<Segment> > get_result();
+
+  /// set the number of segments
+  int set_number_of_segment(int n);
 
 protected:
   /// the string
@@ -67,6 +71,9 @@ protected:
 
   /// name
   string _name;
+
+  /// number of segment
+  int _number_of_segment;
 
   /// factory
   unique_ptr<FitAlgFactory> _fitAlgFactory;

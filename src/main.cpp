@@ -50,6 +50,7 @@ int main(int argc, char *argv[]) {
                  set<string>({ "powerabc", "abline", "const" }));
   opt.add_string("-s", "sequence to b e segmented");
   opt.add_int("-n", "first n numbers", -1);
+  opt.add_int("-numseg", "number of segments", -1);
 
   switch (opt.parse(argc, argv)) {
   case dms::Option::PARSE_HELP: { return 0; }
@@ -64,6 +65,7 @@ int main(int argc, char *argv[]) {
   string fittype = opt.get_string("-fit");
   string sequence = opt.get_string("-s");
   int firstN = opt.get_int("-n");
+  int numSegment = opt.get_int("-numseg");
 
   // convert the input string into a double array
   shared_ptr<vector<double> > seqdbptr(new vector<double>);
@@ -105,6 +107,10 @@ int main(int argc, char *argv[]) {
 
   SegAlgFactory factory;
   unique_ptr<SegAlg> segalg = factory.make(algtype);
+
+  if (numSegment > 0) {
+    segalg->set_parameter("numseg", numSegment);
+  }
 
   segalg->set_fitalg(fittype);
 

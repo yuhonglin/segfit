@@ -38,6 +38,15 @@ void SegAlg::set_parameter(string n, double v) {
   LOG_WARNING(_name, " does not need \"double\" parameter \"", n, "\"");
 }
 
+void SegAlg::set_parameter(string n, int v) {
+  if (n == "numseg") {
+    _number_of_segment = v;
+    return;
+  }
+
+  LOG_WARNING(_name, " does not need \"integer\" parameter \"", n, "\"");
+}
+
 void SegAlg::set_parameter(string n, string v) {
   LOG_WARNING(_name, " does not need \"string\" parameter \"", n, "\"");
 }
